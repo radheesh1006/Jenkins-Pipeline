@@ -29,10 +29,11 @@ pipeline {
             }
         }
 
-        stage('Deploy to S3') {
-            steps {
-                bat 'aws s3 sync build/ s3://%S3_BUCKET%/ --region %AWS_REGION% --delete'
-            }
-        }
+       stage('Deploy to S3') {
+    steps {
+        bat 'aws s3 sync build/ s3://reactmyproject --delete'
+    }
+}
+
     }
 }
