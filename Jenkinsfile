@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     tools {
-        nodejs "NodeJS 18"  // Matches your Jenkins tool name
+        nodejs "nodejs"  // Matches your Jenkins tool name
     }
 
     environment {
-        S3_BUCKET = 'your-bucket-name'
+        S3_BUCKET = 'reactmyproject'
         AWS_REGION = 'ap-south-1'
     }
 
